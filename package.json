@@ -1,0 +1,24 @@
+{
+  "name": "wangshiyu-portfolio-vue",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "王诗宇 · 网页设计 / 前端开发应届生作品集（Vue 3 + Vite 重写版）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "smoke": "node smoke/render.mjs"
+  },
+  "dependencies": {
+    "pinia": "^2.2.6",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/server-renderer": "^3.5.13",
+    "vite": "^6.0.5"
+  }
+}

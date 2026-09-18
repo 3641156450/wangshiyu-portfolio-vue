@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鲁菜 · Shandong cuisine</title>
+<style>
+/* ===== 菜系介绍页 · 双语对照样式 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;background:#faf6ef;color:#2b2118;line-height:1.9}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+/* 顶部：菜名 + 返回 */
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:14px;border-bottom:2px solid #e3d8c6}
+.top h1{font-size:24px}
+.back{color:#a3321d;text-decoration:none;border:1px solid #a3321d;padding:6px 16px;border-radius:6px;font-size:14px;transition:all .2s}
+.back:hover{background:#a3321d;color:#fff}
+/* 左右分栏：正文 + 图片 */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:30px;align-items:start}
+/* 双语对照块：英文正文，鼠标悬停显示中文 */
+.text-container{position:relative;display:block;background:#fff;border:1px solid #e6ddcd;border-left:4px solid #c8912e;border-radius:8px;padding:16px 18px;margin-bottom:16px}
+.text-container p{color:#3a3228}
+.text-container span{display:none;position:absolute;left:18px;right:18px;top:calc(100% - 4px);background:#2b2118;color:#f6ead6;padding:12px 16px;border-radius:0 0 8px 8px;z-index:100;font-size:14px;line-height:1.8}
+.text-container:hover span{display:block}
+.text-container b{color:#a3321d}
+/* 右侧图片 */
+.imgs img{width:100%;height:auto;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.10);margin-bottom:18px;display:block}
+/* 窄屏：单列堆叠 */
+@media(max-width:760px){.layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="top">
+    <h1>鲁菜</h1>
+    <a class="back" href="index.html">← 返回八大菜系主页</a>
+  </header>
+  <div class="layout">
+    <main class="texts">
+    <div class="text-container">
+        <p><b>Introduction:</b>
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shandong cuisine is one of the four
+
+                    traditional Chinese cuisines (and also one of the eight major cuisines) with its own style (compared to
+
+                    influential cuisines such as Huaiyang, Sichuan, and Guangdong). It is the first of the eight major cuisines
+
+                    in China, representing northern cuisine and the foundation of Chinese home cooked cuisine. It is the oldest,
+
+                    most skillful, and most skilled cuisine, as well as a representative of culinary culture in the Yellow River
+
+                    Basin.</p>
+        <span>简介：
+
+                    鲁菜，是中国传统四大菜系（也是八大菜系）中的自发型菜系（相对于淮扬、川、粤等影响型菜系而言）
+
+                    [1]，中国八大菜系之首，是北方菜的代表，也是中国家常菜的基础，是历史最悠久、技法最丰富、最见功力的菜系，黄河流域烹饪文化的代表。</span>
+    </div>
+    <div class="text-container">
+        <p><b>Development history:</b>
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shandong is located in the lower reaches of
+
+                    the Yellow River, with a mild climate. There are many diverse landforms in the province, such as rivers,
+
+                    lakes, hills, plains, and the sea, which has created an extremely rich and balanced variety of food
+
+                    materials for Shandong cuisine: the frequency of entering each category of Shandong cuisine, such as fruits
+
+                    and vegetables, livestock, seafood, freshwater river food, mountain mushrooms, and dried treasures, is
+
+                    between 15% and 18% (the data comes from the research of Mr. Zhou Xiaoyan, a famous chef of Huaiyang Cuisine
+
+                    and a professor of Yangzhou University. The frequency of entering a category of freshwater products of
+
+                    Huaiyang cuisine accounts for 40%, and the frequency of entering a category of Sichuan cuisine, livestock
+
+                    accounts for 50%). The cooking techniques that are most suitable for each type of ingredient are different,
+
+                    and the rich variety of ingredients directly stimulates the rich and diverse cooking techniques of Shandong
+
+                    cuisine. The unique material conditions of Shandong, combined with the Confucian school's pursuit of "never
+
+                    tire of the essence of food and never tire of the details of food" for more than two thousand years, have
+
+                    finally become the grand view of Shandong cuisine.</p>
+        <span>发展历史：
+
+                    山东位于黄河下游，气候温和，省内汇集有大河、大湖、丘陵、平原、大海等多样性的地貌，造就了鲁菜的食材选料品种异常丰富与均衡：鲁菜的果蔬、禽畜、海鲜、淡水河鲜、山菌、干制珍品等每个类别的入菜频率都在15%～18%之间（数据来源于淮扬菜名厨兼扬州大学教授周晓燕先生的研究，淮扬菜淡水产品一个类别入菜频率占40%，川菜禽畜一个类别的入菜频率占50%）。最适合每一种的食材的烹饪技法各不相同，丰富的食材品种直接激发了鲁菜烹饪技法的丰富多样。山东大地得天独厚的物质条件，加上两千多年来浸润着儒家学派“食不厌精、脍不厌细”的精神追求，终成鲁菜系的洋洋大观。</span>
+    </div>
+    <div class="text-container">
+        <p><b>Flavor characteristics:</b>
+
+                    <br>Mainly salty and fresh
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shandong cuisine emphasizes the quality of
+
+                    raw materials, using salt to enhance freshness, soup to enhance freshness, and seasoning to emphasize the
+
+                    purity of saltiness and freshness, highlighting the original flavor. Scallions are a specialty of Shandong,
+
+                    and most dishes require the use of scallions, ginger, and garlic to enhance aroma and flavor. Methods such
+
+                    as stir frying, frying, frying, grilling, and roasting all require the use of scallions. Especially for
+
+                    dishes with scallion burning, it is best to have a strong onion aroma, such as braised sea cucumber with
+
+                    scallions or braised tendon with scallions; Feeding fillings, stir frying, and cold dishes all require
+
+                    scallions, ginger, and garlic. Seafood is abundant and of good quality, with a light fishy taste. Fresh
+
+                    people pay attention to the original taste. Shrimp, crab, shellfish, and clams are often paired with ginger
+
+                    vinegar; High grade ingredients such as bird's nest, shark's fin, sea cucumber, dried abalone, fish skin,
+
+                    and fish bones are of good quality and low taste, so it is necessary to use high broth to enhance freshness.</p>
+        <span>风味特色：
+
+                    <br> 咸鲜为主
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鲁菜讲究原料质地优良，以盐提鲜，以汤壮鲜，调味讲求咸鲜纯正，突出本味。大葱为山东特产，多数菜肴要要用葱姜蒜来增香提味，炒、熘、爆、扒、烧等方法都要用葱，尤其是葱烧类的菜肴，更是以拥有浓郁的葱香为佳，如葱烧海参、葱烧蹄筋；喂馅、爆锅、凉拌都少不了葱姜蒜。海鲜类量多质优，异腥味较轻，鲜活者讲究原汁原味，虾、蟹、贝、蛤，多用姜醋佐食；燕窝、鱼翅、海参、干鲍、鱼皮、鱼骨等高档原料，质优味寡，必用高汤提鲜。</span>
+    </div>
+    <div class="text-container">
+        <p>Fire characteristics
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The outstanding cooking methods of Shandong
+
+                    cuisine include exploding, scraping, and pulling silk, especially the exploding and pulling silk, which are
+
+                    well-known by the world. Explosion can be divided into oil explosion, soy sauce explosion, coriander
+
+                    explosion, scallion explosion, soup explosion, hot explosion, etc. "The way of cooking is like taking
+
+                    treasure from fire. If it is not cooked well, it will be born; if it is slightly over, it will be old,
+
+                    competing for it in an instant, and losing it in an instant.". The explosive technique fully reflects the
+
+                    skill of Shandong cuisine in using fire. Therefore, people call it "food in China, fire in Shandong".</p>
+        <span>火候特点
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鲁菜的突出烹调方法为爆、扒、
+
+                    拔丝，尤其是爆、拔丝为世人所称道。爆，分为油爆、酱爆、芫爆、葱爆、汤爆、火爆等，“烹饪之道，如火中取宝。不及则生，稍过则老，争之于俄顷，失之于须臾”。爆的技法充分体现了鲁菜在用火上的功夫。因此，世人称之为“食在中国，火在山东”。</span>
+    </div>
+    <div class="text-container">
+        <p>Skilled in making soup
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lu cuisine uses soup as the source of all
+
+                    kinds of freshness, emphasizing the modulation of "clear soup" and "milk soup", with clear turbidity and
+
+                    freshness. The method of making clear soup has been recorded as early as in "Qi Min Yao Shu". There are a
+
+                    variety of dishes made with "clear soup" and "milk soup", including famous dishes such as "clear soup family
+
+                    photo", "clear soup white fungus", "clear soup bird's nest", "boiled lotus yellow tube", "milk soup Pucai",
+
+                    "milk soup eight treasure cloth bag chicken", "soup explosion double crispy", etc., which are often listed
+
+                    as delicacies in high-end banquets.</p>
+        <span>精于制汤
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鲁菜以汤为百鲜之源，讲究“清汤”、“奶汤”的调制，清浊分明，取其清鲜。清汤的制法，早在《齐民要术》中已有记载。用“清汤”和“奶汤”制作的菜品繁多，名菜就有“清汤全家福”、‘’清汤银耳“、‘’清汤燕窝“、氽芙蓉黄管”、“奶汤蒲菜”、“奶汤八宝布袋鸡”、“汤爆双脆”等，多被列为高档宴席的珍馔美味。</span>
+    </div>
+    <div class="text-container">
+        <p>Skilled in cooking seafood
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cooking of sea delicacies and small
+
+                    seafood is unparalleled. Shandong's seafood, whether it's ginseng, wings, swallows, shellfish, scales, scale
+
+                    insects, shrimp, or crabs, can all become exquisite and delicious dishes cooked with the ingenuity of local
+
+                    chefs.</p>
+        <span>善烹海味
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对海珍品和小海味的烹制堪称一绝。山东的海产品，不论参、翅、燕、贝，还是鳞、蚧、虾、蟹，经当地厨师的妙手烹制，都可成为精鲜味美之佳肴。</span>
+    </div>
+    <div class="text-container">
+        <p>Pay attention to etiquette
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shandong has a simple folk style, hospitable
+
+                    and generous hospitality. In terms of food, it is abundant and affordable with large plates and bowls,
+
+                    emphasizing quality. Influenced by Confucius' concept of ritual food, it emphasizes on appearance and
+
+                    dietary etiquette. Regular banquets include so-called "perfect banquets", such as "large banquets", "shark
+
+                    fin banquets", "shark fin banquets", "shark fin abalone banquets", "sea cucumber banquets", "swallow wing
+
+                    banquets", and "four four four banquets", all of which can reflect the elegant and atmospheric side of
+
+                    Shandong cuisine.</p>
+        <span>注重礼仪
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;山东民风朴实，待客豪爽，在饮食上大盘大碗丰盛实惠，注重质量，受孔子礼食思想的影响，讲究排场和饮食礼仪。正规筵席有所谓的“十全十美席”，“大件席”、“鱼翅席”、“翅鲍席”、“海参席”、“燕翅席”、“四四席”等，都能体现出鲁菜典雅大气的一面。</span>
+    </div>
+    </main>
+    <aside class="imgs">
+        <img src="image/lu1.jpg" alt="鲁菜 菜品图片" loading="lazy">
+        <img src="image/lu2.jpg" alt="鲁菜 菜品图片" loading="lazy">
+    </aside>
+  </div>
+</div>
+
+</body>
+</html>

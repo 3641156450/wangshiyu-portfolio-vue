@@ -1,0 +1,87 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同时只允许一个部署任务，避免并发写 Pages 环境
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  # 第一步：判断仓库里是不是已经有真正的源码。
+  # 用 bundle.zip 引导的场景下，第一次推送可能只有 zip 或只有工作流文件，
+  # 这时不该直接跑构建报错——所以先探测，没准备好就安静跳过。
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.check.outputs.ready }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore source bundle (bootstrap only)
+        if: hashFiles('bundle.zip') != ''
+        run: |
+          unzip -q -o bundle.zip -d .
+          rm -f bundle.zip
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore(bootstrap): 解压 bundle.zip 还原项目源码"
+          git push origin "HEAD:${{ github.ref_name }}"
+
+      - id: check
+        name: Check whether project source is ready
+        run: |
+          if [ -f package.json ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "源码就绪，继续构建。"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "仓库里还没有项目源码（缺少 package.json），本次跳过构建。"
+            echo "如果你是走网页端上传 bundle.zip 的方式建仓库，请先确保 bundle.zip 已上传。"
+          fi
+
+  build:
+    needs: prepare
+    if: needs.prepare.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Smoke test all routes (SSR render)
+        run: npm run smoke
+
+      - name: Build
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

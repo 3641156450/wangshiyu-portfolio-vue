@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>川菜 · Sichuan cuisine</title>
+<style>
+/* ===== 菜系介绍页 · 双语对照样式 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;background:#faf6ef;color:#2b2118;line-height:1.9}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+/* 顶部：菜名 + 返回 */
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:14px;border-bottom:2px solid #e3d8c6}
+.top h1{font-size:24px}
+.back{color:#a3321d;text-decoration:none;border:1px solid #a3321d;padding:6px 16px;border-radius:6px;font-size:14px;transition:all .2s}
+.back:hover{background:#a3321d;color:#fff}
+/* 左右分栏：正文 + 图片 */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:30px;align-items:start}
+/* 双语对照块：英文正文，鼠标悬停显示中文 */
+.text-container{position:relative;display:block;background:#fff;border:1px solid #e6ddcd;border-left:4px solid #c8912e;border-radius:8px;padding:16px 18px;margin-bottom:16px}
+.text-container p{color:#3a3228}
+.text-container span{display:none;position:absolute;left:18px;right:18px;top:calc(100% - 4px);background:#2b2118;color:#f6ead6;padding:12px 16px;border-radius:0 0 8px 8px;z-index:100;font-size:14px;line-height:1.8}
+.text-container:hover span{display:block}
+.text-container b{color:#a3321d}
+/* 右侧图片 */
+.imgs img{width:100%;height:auto;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.10);margin-bottom:18px;display:block}
+/* 窄屏：单列堆叠 */
+@media(max-width:760px){.layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="top">
+    <h1>川菜</h1>
+    <a class="back" href="index.html">← 返回八大菜系主页</a>
+  </header>
+  <div class="layout">
+    <main class="texts">
+    <div class="text-container">
+        <p><p><b>Introduction:</b><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    Sichuan cuisine, as one of the four major cuisines in China,
+
+                    is famous for its unique spicy taste and rich cooking techniques.
+
+                    The main raw materials are mountain delicacies,
+
+                    aquatic products, and vegetables and fruits within the Sichuan region;
+
+                    The main ingredients are Sichuan sugar, Chinese prickly ash,
+
+                    chili, bean paste and Fermented bean curd.
+
+                    There are 40 cooking techniques for Sichuan cuisine,
+
+                    including frying, stir frying, oil pouring, and crispy frying.
+
+                    The flavor pattern is characterized by spiciness, fishy aroma,
+
+                    and peculiar taste.</p>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;川菜，作为中国四大菜系之一，以其独特的麻辣味道和丰富的烹饪技巧闻名。
+
+                    <br>原料以四川地区境内的山珍、水产、蔬果为主；
+
+                    调辅料以川糖、花椒、辣椒及豆瓣、<br>腐乳为主。
+
+                    川菜烹饪技法有煎、炒、油淋、酥炸等40种。<br>
+
+                    味型以麻辣、鱼香、怪味为其突出特点。</span>
+    </div>
+    <div class="text-container">
+        <p><B> Classification:</B><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reconstruction of the
+
+                    theoretical system of modern Sichuan cuisine under the new normal, including the division of the three
+
+                    schools of Sichuan cuisine, is based on the existing consensus of Shanghe Gang, Xiaohe Gang, and Xiahe
+
+                    Gang.<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It is standardized and fully
+
+                    expressed as follows: Shanghe Gang Sichuan cuisine refers to the Rong style Sichuan cuisine centered around
+
+                    Chengdu and Leshan in western Sichuan, characterized by being friendly and peaceful, rich in seasoning,
+
+                    relatively light in taste, and many traditional dishes; Xiaohebang Sichuan Cuisine is the Dishes of Salt
+
+                    School centered on Zigong in southern Sichuan, including Yibin Cuisine, Luzhou Cuisine and Neijiang Cuisine.
+
+                    It is characterized by thick, heavy and rich taste;
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sichuan cuisine refers to
+
+                    Sichuan cuisine represented by Dazhou cuisine, Chongqing cuisine, and Wanzhou cuisine. The three together
+
+                    constitute the three mainstream local flavor branches of Sichuan cuisine, representing the highest artistic
+
+                    level of Sichuan cuisine development.
+
+                    <br>Shanghe Gang
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Centered around western Sichuan, Chengdu, and Leshan.
+
+                    <br>Xiaohe Gang
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Represented by southern Sichuan, Zigong, Neijiang, Luzhou, and Yibin.
+
+                    <br>Xiahe Gang
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;Centered around eastern Sichuan, Chongqing, Wanzhou, and Dazhou.</p>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新常态下对现代川菜理论体系的重新构建，包括川菜三派的划分，是在已有定论的上河帮，小河帮，下河帮的基础上，规范化完整表述为：
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上河帮川菜即以川西成都、乐山为中心地区的蓉派川菜，其特点以亲民平和，调味丰富，口味相对清淡，多传统菜品；
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小河帮川菜即以川南自贡为中心的盐帮菜，同时包括宜宾菜、泸州菜和内江菜，其特点是味厚、味重、味丰为其鲜明特色；
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 下河帮川菜即以达州菜、重庆菜、万州菜为代表的川菜。三者共同组成川菜三大主流地方风味流派分支菜系，代表川菜发展最高艺术水平。
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上河帮
+
+                    以川西、成都、乐山为中心的。
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小河帮
+
+                    以川南、自贡、内江、泸州、宜宾为代表的。
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下河帮
+
+                    以川东、重庆、万州、达州为中心的。</span>
+    </div>
+    <div class="text-container">
+        <p><b>Development history:</b>
+
+                   <br> Ancient Sichuan cuisine
+
+                   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It existed from the states of Ba and Shu in the pre Qin period to before the Opium War in the Qing Dynasty. During this period, Sichuan cuisine went through a period of incubation and development, with the initial formation and maturity of Sichuan cuisine.
+
+                    <br>Modern Sichuan cuisine
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modern Sichuan cuisine lasted from the Opium War in 1840 to 1949 during the reign of Emperor Daoguang of the Qing Dynasty. During this period, Sichuan cuisine continued to be inclusive, and the Sichuan cuisine eventually formed in the late Qing Dynasty, becoming one of the four major local flavor cuisines in China and steadily developing during the Republic of China period.</p>
+        <span>古代川菜
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  其存在时段为先秦的巴国和蜀国至清代的鸦片战争以前。在这个时期，川菜经历了孕育萌芽，川菜菜系初步形成和成熟的发展时期 。
+
+                    <br>近代川菜
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 近代川菜，时间段为清道光二十年（1840年）鸦片战争至1949年。这一时期，川菜不断兼收并蓄，川菜菜系在清代后期最终形成，成为中国主要的四大地方风味菜系之一，并在民国时期稳步发展。</span>
+    </div>
+    </main>
+    <aside class="imgs">
+        <img src="image/chuan1.jpg" alt="川菜 菜品图片" loading="lazy">
+        <img src="image/chuan2.jpg" alt="川菜 菜品图片" loading="lazy">
+    </aside>
+  </div>
+</div>
+
+</body>
+</html>

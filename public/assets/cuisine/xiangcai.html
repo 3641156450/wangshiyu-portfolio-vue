@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湘菜 · Hunan cuisine</title>
+<style>
+/* ===== 菜系介绍页 · 双语对照样式 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;background:#faf6ef;color:#2b2118;line-height:1.9}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+/* 顶部：菜名 + 返回 */
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:14px;border-bottom:2px solid #e3d8c6}
+.top h1{font-size:24px}
+.back{color:#a3321d;text-decoration:none;border:1px solid #a3321d;padding:6px 16px;border-radius:6px;font-size:14px;transition:all .2s}
+.back:hover{background:#a3321d;color:#fff}
+/* 左右分栏：正文 + 图片 */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:30px;align-items:start}
+/* 双语对照块：英文正文，鼠标悬停显示中文 */
+.text-container{position:relative;display:block;background:#fff;border:1px solid #e6ddcd;border-left:4px solid #c8912e;border-radius:8px;padding:16px 18px;margin-bottom:16px}
+.text-container p{color:#3a3228}
+.text-container span{display:none;position:absolute;left:18px;right:18px;top:calc(100% - 4px);background:#2b2118;color:#f6ead6;padding:12px 16px;border-radius:0 0 8px 8px;z-index:100;font-size:14px;line-height:1.8}
+.text-container:hover span{display:block}
+.text-container b{color:#a3321d}
+/* 右侧图片 */
+.imgs img{width:100%;height:auto;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.10);margin-bottom:18px;display:block}
+/* 窄屏：单列堆叠 */
+@media(max-width:760px){.layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="top">
+    <h1>湘菜</h1>
+    <a class="back" href="index.html">← 返回八大菜系主页</a>
+  </header>
+  <div class="layout">
+    <main class="texts">
+    <div class="text-container">
+        <p><b>Introduction:</b>
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hunan cuisine, also known as Hunan cuisine, is one of the eight major Han Chinese cuisines with a long history in China. It has been formed since the Han Dynasty. The main local flavors are the Xiangjiang River Basin, Dongting Lake Area, and Xiangxi Mountain Area.
+
+                    Hunan cuisine is finely crafted, with a wide range of ingredients, diverse flavors, and a wide variety of varieties; The color is oily and rich, emphasizing affordability; Pay attention to spiciness, freshness, and softness in taste; In terms of preparation, it is known for various methods such as simmering, stewing, waxing, steaming, and stir frying.</p>
+        <span>简介：
+
+                    湘菜，又叫湖南菜，是中国历史悠久的汉族八大菜系之一 ，早在汉朝就已经形成菜系。以湘江流域、洞庭湖区和湘西山区三种地方风味为主。
+
+                    湘菜制作精细，用料上比较广泛，口味多变，品种繁多；色泽上油重色浓，讲求实惠；品味上注重香辣、香鲜、软嫩；制法上以煨、炖、腊、蒸、炒诸法见称。</span>
+    </div>
+    <div class="text-container">
+        <p><b>Development history:</b>
+
+                    <br>Spring and Autumn Period and Warring States Period
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Based on the large number of exquisite pottery utensils and wine vessels unearthed from the Neolithic sites in Hunan, as well as the remnants of grains and animal bones unearthed along with these pottery vessels, it is confirmed that the ancestors of Xiaoxiang had already left their primitive state of drinking blood and started eating cooked food eight or nine thousand years ago.</p>
+        <span>发展历史：
+
+                    春秋战国时期
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从湖南的新石器遗址中出土的大量精美的陶食器和酒器，以及伴随这些陶器一起出土的谷物和动物骨骸的残存来测算，证实潇湘先民早在八九千年前就脱离了茹毛饮血的原始状态，开始吃熟食了。</span>
+    </div>
+    <div class="text-container">
+        <p>During the Qin and Han dynasties
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; During the Qin and Han dynasties, Hunan's culinary culture gradually formed a relatively complete system from ingredients, cooking methods, to flavor styles. The abundance of raw materials used, the variety of cooking methods, and the freshness of flavors were all prominent.</p>
+        <span>秦汉两代时期
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;秦汉两代，湖南的饮食文化逐步形成了一个从用料、烹调方法到风味风格都比较完整的体系，其使用原料之丰盛，烹调方法之多彩，风味之鲜美，都是比较突出的。</span>
+    </div>
+    <div class="text-container">
+        <p>During the Western Han Dynasty
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From the unearthed strategies of the Western Han Dynasty, it can be seen that the cooking methods in Hunan's culinary life during the Han Dynasty had further developed compared to the Warring States period, developing into various types such as soup, grilling, frying, boiling, steaming, washing, stewing, dried pork, wax, artillery, minced pork, and so on. The seasonings used for cooking include salt, soy sauce, fermented soybeans, koji, sugar, honey, leeks, plums, cinnamon, Sichuan pepper, and cornel.</p>
+        <span>西汉时期
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从出土的西汉遗策中可以看出，汉代湖南饮食生活中的烹调方法比战国时代已有进一步的发展，发展到羹、炙、煎、熬、蒸、濯、脍、脯、腊、炮、醢、苴等多种。烹调用的调料就有盐、酱、豉、曲、糖、蜜、韭、梅、桂皮、花椒、茱萸等。</span>
+    </div>
+    <div class="text-container">
+        <p>Tang, Song, Ming, and Qing dynasties
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due to its abundant resources, Hunan is known as the "land of fish and rice". Therefore, since the Tang and Song dynasties, especially during the Ming and Qing dynasties, the development of Hunan's culinary culture has become more perfect, gradually forming a distinctive Hunan cuisine among the eight major cuisines in China.</p>
+        <span>唐宋明清
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于湖南物产丰富，素有“鱼米之乡”的美称，所以自唐、宋以来，尤其在明、清之际湖南饮食文化的发展更趋完善，逐步形成了全国八大菜系中一支具有鲜明特色的湘菜系。</span>
+    </div>
+    <div class="text-container">
+        <p>the Republic of China era
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During the Republic of China period, famous figure Tan Yankai and his family's chef established an important branch of Hunan cuisine - Zu'an Xiang Cuisine. Zu'an Hunan cuisine has won people's favor with its culinary philosophy of "excellent selection of raw materials, fine knife processing, exquisite cooking skills, and precise flavor coordination", and is known as the "source of Hunan cuisine". Zu'an Hunan cuisine is a famous series and important genre in Hunan cuisine.</p>
+        <span>民国时期
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;民国时期名人谭延闿及其家厨创立了湘菜的重要菜系－组庵湘菜。组庵湘菜以“原材料选取精良、刀工处理精细、烹制技艺精湛、味道调和精准”的美食理念赢得了人们的青睐，被称为“湘菜之源”，组庵湘菜是湘菜中的著名系列和重要流派。</span>
+    </div>
+    <div class="text-container">
+        <p><b>Cuisine features:</b>
+
+                    <br>Basic features
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hunan cuisine has always attached great importance to the combination of ingredients and the infiltration of flavors. Hunan cuisine has a particularly strong and spicy seasoning. Due to its geographical location, Hunan has a mild and humid climate, so people prefer to eat chili peppers to refresh themselves and remove dampness. Meanwhile, stir frying is also a specialty of Hunan cuisine.</p>
+        <span>菜系特点：
+
+                    <br>基本特色
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;湘菜历来重视原料互相搭配，滋味互相渗透。湘菜调味尤重香辣。因地理位置的关系，湖南气候温和湿润，故人们多喜食辣椒，用以提神去湿。同时，爆炒也是湖南人做菜的拿手好戏。</span>
+    </div>
+    <div class="text-container">
+        <p>Cooking characteristics
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With a long history, there are several types of cooking techniques in each of the three major categories of hot cooking, cold cooking, and sweet cooking. Relatively speaking, the stewing technique of Hunan cuisine is superior, almost reaching the level of perfection. Simmering can be divided into red simmering and white simmering in terms of color change. In terms of seasoning, there are clear soup simmering, thick soup simmering, and milk soup simmering. Simmer slowly over low heat, with the original flavor and flavor. Some dishes are crystal clear and mellow, some have pure and nourishing juices, some are soft, sticky and rich, some are crispy, rotten and fragrant, and many of the stewed dishes have become famous delicacies in Hunan cuisine.</p>
+        <span>烹调特色
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历史悠久，在热烹、冷制、甜调三大类烹调技法中，每类技法少则几种，多的有几十种。相对而言，湘菜的煨功夫更胜一筹，几乎达到炉火纯青的地步。煨，在色泽变化上可分为红煨、白煨，在调味方面有清汤煨、浓汤煨和奶汤煨。小火慢炖，原汁原味。有的菜晶莹醇厚，有的菜汁纯滋养，有的菜软糯浓郁，有的菜酥烂鲜香，许多煨出来的菜肴，成为湘菜中的名馔佳品。</span>
+    </div>
+    </main>
+    <aside class="imgs">
+        <img src="image/xiang1.jpg" alt="湘菜 菜品图片" loading="lazy">
+        <img src="image/xiang2.jpg" alt="湘菜 菜品图片" loading="lazy">
+    </aside>
+  </div>
+</div>
+
+</body>
+</html>

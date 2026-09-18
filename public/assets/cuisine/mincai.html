@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>闽菜 · Fujian cuisine</title>
+<style>
+/* ===== 菜系介绍页 · 双语对照样式 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI","Microsoft YaHei",sans-serif;background:#faf6ef;color:#2b2118;line-height:1.9}
+.container{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+/* 顶部：菜名 + 返回 */
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:14px;border-bottom:2px solid #e3d8c6}
+.top h1{font-size:24px}
+.back{color:#a3321d;text-decoration:none;border:1px solid #a3321d;padding:6px 16px;border-radius:6px;font-size:14px;transition:all .2s}
+.back:hover{background:#a3321d;color:#fff}
+/* 左右分栏：正文 + 图片 */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:30px;align-items:start}
+/* 双语对照块：英文正文，鼠标悬停显示中文 */
+.text-container{position:relative;display:block;background:#fff;border:1px solid #e6ddcd;border-left:4px solid #c8912e;border-radius:8px;padding:16px 18px;margin-bottom:16px}
+.text-container p{color:#3a3228}
+.text-container span{display:none;position:absolute;left:18px;right:18px;top:calc(100% - 4px);background:#2b2118;color:#f6ead6;padding:12px 16px;border-radius:0 0 8px 8px;z-index:100;font-size:14px;line-height:1.8}
+.text-container:hover span{display:block}
+.text-container b{color:#a3321d}
+/* 右侧图片 */
+.imgs img{width:100%;height:auto;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.10);margin-bottom:18px;display:block}
+/* 窄屏：单列堆叠 */
+@media(max-width:760px){.layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="top">
+    <h1>闽菜</h1>
+    <a class="back" href="index.html">← 返回八大菜系主页</a>
+  </header>
+  <div class="layout">
+    <main class="texts">
+    <div class="text-container">
+        <p><b>Introduction:</b>
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Min cuisine is one of the eight major cuisines in China, formed through the mixing of Han culture in the Central Plains and Min Yue culture. Originating from Fuzhou, this cuisine is based on Fuzhou cuisine and later combines flavors from five regions: East Fujian, South Fujian, West Fujian, North Fujian, and Puxian.</p>
+        <span>简介：
+
+                    闽菜是中国八大菜系之一，历经中原汉族文化和闽越族文化的混合而形成。发源于福州，以福州菜为基础，后又融合闽东、闽南、闽西、闽北、莆仙五地风味菜形成的菜系。</span>
+    </div>
+    <div class="text-container">
+        <p><b>Historical origin:</b>
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As early as the "Yongjia Rebellion" during the Jin and Northern and Southern Dynasties, a large number of Central Plains aristocrats and nobles entered Fujian, bringing advanced technology and culture from the Central Plains. The mixing and exchange with the ancient Yue culture in Fujian promoted local development.</p>
+        <span>历史起源：
+
+                    早在两晋、南北朝时期的“永嘉之乱”以后，大批中原衣冠士族入闽，带来了中原先进的科技文化，与闽地古越文化的混合和交流，促进了当地的发展。
+
+                    晚唐五代，河南光州固始的王审知兄弟带兵入闽建立“闽国”，对福建饮食文化的进一步开发、繁荣，产生了积极的促进作用。如，在唐代以前中原地区已开始使用红曲作为烹饪的作料。</span>
+    </div>
+    <div class="text-container">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the late Tang and Five Dynasties, Wang Shenzhi and his brothers from Gushi, Guangzhou, Henan, led troops to Fujian to establish the "Min State", which played a positive role in the further development and prosperity of Fujian's culinary culture. For example, before the Tang Dynasty, red yeast had already been used as a cooking seasoning in the Central Plains region.</p>
+        <span>晚唐五代，河南光州固始的王审知兄弟带兵入闽建立“闽国”，对福建饮食文化的进一步开发、繁荣，产生了积极的促进作用。如，在唐代以前中原地区已开始使用红曲作为烹饪的作料。</span>
+    </div>
+    <div class="text-container">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the Tang Dynasty, due to the extensive use of red koji, red became the main color in the cooking aesthetics of Fujian cuisine, and red lees with special flavor became the commonly used seasoning in cooking. Red lees fish, red lees chicken, red lees meat, etc. were the main dishes of Fujian cuisine, and "red koji cooking" became the main feature of Fujian cuisine.</p>
+        <span>唐朝，由于大量使用红曲，红色也就成为闽菜烹饪美学中的主要色调，有特殊香味的红色酒糟也成了烹饪时常用的作料，红糟鱼、红糟鸡、红糟肉等都是闽菜主要的菜肴，“红曲烹调”成为闽菜的主要特点。</span>
+    </div>
+    <div class="text-container">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due to the successive trade between Fuzhou, Xiamen, and Quanzhou, and the gathering of merchants from all directions, cultural exchanges have become increasingly frequent, and overseas skills have also been introduced. On the basis of inheriting the traditional skills, Fujian cuisine absorbs the essence of all kinds of dishes, adjusts and changes the rough and smooth style, so that it gradually evolves into a fine, light and elegant style, and develops into a highly stylish Fujian cuisine system.</p>
+        <span>由于福州、厦门、泉州先后对外通商，四方商贾云集，文化交流日益频繁，海外的技艺也相随传入。闽菜在继承传统技艺的基础上，博采各路菜肴之精华，对粗糙、滑腻的风格加以调整变易，使之逐渐朝着精细、清淡、典雅的品格演变，发展成为格调甚高的闽菜体系。</span>
+    </div>
+    <div class="text-container">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the end of the Qing Dynasty and the beginning of the Republic of China, a group of famous local restaurants and skilled chefs emerged in Fujian. These restaurants are known for their Manchu and Han cuisine, or for their expertise in official cuisine, or for their reputation for local flavors, each with their own strengths, promoting the formation and continuous improvement of local flavors.</p>
+        <span>清末民初，福建先后涌现出一批富有地方特色的名店和真才实艺的名厨。这些菜馆或以满汉席著称，或以官场菜见长，或以地方风味享有盛誉，各有擅长，促进了地方风味的形成和不断完善。</span>
+    </div>
+    <div class="text-container">
+        <p><b>Minnan cuisine charm:</b>
+
+                    <br>Main body of Fujian cuisine
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The flavor of Fujian cuisine is represented by Fuzhou cuisine, which is also the main body of Fujian cuisine. It is not only popular in the Fujian Taiwan region, but also a representative of Fujian cuisine that can be seen everywhere in Chinatowns at home and abroad. It is also known as "Fuzhou cuisine is fragrant and has been passed down through the ages".
+
+                    Fine material selection and rigorous cutting techniques; Pay attention to heat and soup preparation; Likes to use seasoning and has a variety of flavors</p>
+        <span>闽菜风韵：
+
+                    <br>闽菜主体
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;闽菜风味，以福州菜为代表，同时也是闽菜的主体，不仅流行在闽台地区,更是海内外唐人街随处可见的闽菜代表,更有“福州菜飘香四海，食文化千古流传”之称。
+
+                    选料精细，刀工严谨；讲究火候，注重调汤；喜用佐料，口味多变</span>
+    </div>
+    <div class="text-container">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cooking characteristics of Fujian cuisine are clear soup, light taste, and crispy stir fry. They are good at cooking seafood dishes. Its cooking techniques are characterized by steaming, frying, frying, stewing, frying, and stewing.</p>
+        <span>闽菜的烹调特点是汤菜要清，味道要淡，炒食要脆擅长烹制海鲜佳肴。其烹调技法以蒸煎、炒、熘、焖、炸、炖为特色。</span>
+    </div>
+    </main>
+    <aside class="imgs">
+        <img src="image/min1.jpg" alt="闽菜 菜品图片" loading="lazy">
+        <img src="image/min2.jpg" alt="闽菜 菜品图片" loading="lazy">
+    </aside>
+  </div>
+</div>
+
+</body>
+</html>

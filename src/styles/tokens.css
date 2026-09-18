@@ -1,0 +1,125 @@
+/* ========== 设计令牌 ==========
+ * 全站唯一的颜色 / 圆角 / 阴影 / 字体来源。
+ * 深色模式下只需覆盖同名变量，业务样式基本零改动。
+ */
+:root {
+  --ink-900: #0c1a26;
+  --ink-800: #122332;
+  --ink-700: #1b3447;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --line: #e1e7ee;
+  --line-strong: #cbd5e1;
+  --text: #1f2d3a;
+  --muted: #5d7185;
+  --accent: #e8a33d;
+  --accent-strong: #d38b1f;
+  --accent-soft: #fbf0dc;
+
+  /* 深色区块专用，不随主题翻转 */
+  --deep: #0c1a26;
+
+  /* 语义扩展令牌：深色模式下会切换 */
+  --surface-2: #f8fafc;
+  --surface-sunken: #eef2f6;
+  --input-bg: #ffffff;
+  --tip-bg: #f8fafc;
+  --code-bg: #0b1520;
+  --amber: #7fc1ff;
+
+  --radius: 10px;
+  --shadow-sm: 0 1px 2px rgba(12, 26, 38, 0.06), 0 4px 14px rgba(12, 26, 38, 0.05);
+  --shadow-md: 0 8px 30px rgba(12, 26, 38, 0.12);
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --header-h: 64px;
+
+  color-scheme: light;
+}
+
+/* ========== 深色主题 ==========
+ * --ink-900 在浅色下同时承担「深色区块底色」和「标题文字色」两种语义。
+ * 深色模式下把它整体翻转为浅色，再把原本作为底色的选择器改指向恒定深色 --deep。
+ */
+[data-theme="dark"] {
+  --ink-900: #eaf2f9;
+  --ink-800: #d3e2ef;
+  --ink-700: #b9cddf;
+  --bg: #0b131b;
+  --surface: #131f2b;
+  --card: #16232f;
+  --surface-2: #182737;
+  --surface-sunken: #0f1a25;
+  --line: #23384b;
+  --line-strong: #33506b;
+  --text: #dbe6f0;
+  --muted: #93a8bb;
+  --accent: #f0b45c;
+  --accent-strong: #ffc971;
+  --accent-soft: #2c2a1c;
+  --input-bg: #182737;
+  --tip-bg: #16232f;
+  --amber: #7fc1ff;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.45);
+
+  color-scheme: dark;
+}
+
+/* —— 原本用 --ink-900 做底色的区块，深色模式下锁定为深蓝 —— */
+[data-theme="dark"] .btn-dark,
+[data-theme="dark"] .btn-dark:hover,
+[data-theme="dark"] .hero,
+[data-theme="dark"] .page-hero,
+[data-theme="dark"] .cta-band,
+[data-theme="dark"] .site-footer,
+[data-theme="dark"] .toast,
+[data-theme="dark"] .filter-btn.active,
+[data-theme="dark"] .doc-block .doc-title .no {
+  background: var(--deep);
+}
+
+[data-theme="dark"] .toast {
+  color: #fff;
+}
+
+[data-theme="dark"] .main-nav.open {
+  background: var(--deep);
+}
+
+/* —— 少量内联写死 #fff 的浅色容器 —— */
+[data-theme="dark"] .tool-card,
+[data-theme="dark"] .spec-btn,
+[data-theme="dark"] .board-btn {
+  background: var(--surface-2);
+  border-color: var(--line);
+}
+
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field textarea {
+  background: var(--input-bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .field input:focus,
+[data-theme="dark"] .field textarea:focus {
+  background: var(--input-bg);
+}
+
+/* 证件照画布 = 相纸，任何时候都保持白底 */
+[data-theme="dark"] .canvas-box canvas {
+  background: #fff;
+}
+
+/* 降低配图在深色背景下的刺眼感 */
+[data-theme="dark"] .proj-thumb img,
+[data-theme="dark"] .cert-card .c-ico svg,
+[data-theme="dark"] .contact-item .ci {
+  opacity: 0.94;
+}
+
+[data-theme="dark"] .tag {
+  background: var(--accent-soft);
+  color: var(--text);
+}

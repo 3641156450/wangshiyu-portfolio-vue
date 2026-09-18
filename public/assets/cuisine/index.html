@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>八大菜系介绍 · 双语对照主页</title>
+<style>
+/* ===== 主页：图片地图导航 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei","Segoe UI",sans-serif;background:#faf6ef;color:#2b2118;text-align:center;padding:28px 16px 40px}
+h1{font-size:26px;letter-spacing:2px}
+.sub{color:#8a7a66;font-size:14px;margin-top:6px;margin-bottom:22px}
+.pic-wrap{max-width:1000px;margin:0 auto}
+.pic-wrap img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 10px 34px rgba(0,0,0,.14)}
+.tip{margin-top:16px;font-size:13px;color:#a08b72}
+/* 菜系文字导航：图片热区的兜底入口，保证任何情况下都能跳转 */
+.nav-list{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px;max-width:1000px;margin-left:auto;margin-right:auto}
+.nav-list a{display:inline-block;padding:8px 18px;background:#fff;border:1px solid #e0d5c2;border-radius:24px;color:#2b2118;text-decoration:none;font-size:14px;transition:all .2s}
+.nav-list a:hover{background:#a3321d;border-color:#a3321d;color:#fff}
+@media(max-width:520px){h1{font-size:21px}}
+</style>
+</head>
+<body>
+<h1>八大菜系介绍</h1>
+<p class="sub">点击图中菜系位置进入对应介绍页 · 英文段落悬停显示中文对照</p>
+<div class="pic-wrap">
+  <img id="mapImg" src="image/caixi.jpg" alt="八大菜系分布图" usemap="#caixi">
+</div>
+<!-- 热区坐标以 1000px 设计宽度为基准（与原版一致），coords 直接可点，JS 仅负责随屏幕缩放换算 -->
+<map name="caixi">
+  <area coords="400,162,75" data-c="400,162,75" shape="circle" alt="川菜" href="chuancai.html">
+  <area coords="562,162,75" data-c="562,162,75" shape="circle" alt="粤菜" href="yuecai.html">
+  <area coords="262,275,75" data-c="262,275,75" shape="circle" alt="徽菜" href="huicai.html">
+  <area coords="262,452,75" data-c="262,452,75" shape="circle" alt="鲁菜" href="lucai.html">
+  <area coords="725,275,75" data-c="725,275,75" shape="circle" alt="浙菜" href="zhecai.html">
+  <area coords="725,452,75" data-c="725,452,75" shape="circle" alt="湘菜" href="xiangcai.html">
+  <area coords="400,572,75" data-c="400,572,75" shape="circle" alt="闽菜" href="mincai.html">
+  <area coords="562,572,75" data-c="562,572,75" shape="circle" alt="苏菜" href="sucai.html">
+</map>
+<p class="tip">提示：点击图中圆形菜系位置即可跳转 · 也可用下方文字入口</p>
+<nav class="nav-list" aria-label="菜系导航">
+  <a href="chuancai.html">川菜</a>
+  <a href="yuecai.html">粤菜</a>
+  <a href="huicai.html">徽菜</a>
+  <a href="lucai.html">鲁菜</a>
+  <a href="zhecai.html">浙菜</a>
+  <a href="xiangcai.html">湘菜</a>
+  <a href="mincai.html">闽菜</a>
+  <a href="sucai.html">苏菜</a>
+</nav>
+<script>
+// ===== 热区坐标适配 =====
+// 原图 4000px，热区坐标按 1000px 设计宽度绘制；图片按容器缩放后，
+// 用 显示宽度 / 1000 得到比例，把坐标换算回当前显示尺寸，保证点击不偏移。
+var img = document.getElementById("mapImg");
+var areas = Array.prototype.slice.call(document.querySelectorAll("area"));
+var BASE = 1000; // 热区坐标的设计基准宽度
+function fitMap(){
+  if (!img.naturalWidth) return;               // 图片未加载完成，等 load 事件再算
+  var s = img.clientWidth / BASE;              // 显示宽度 ÷ 设计宽度 = 缩放比例
+  areas.forEach(function(a){
+    var c = a.getAttribute("data-c").split(",").map(Number); // 设计坐标
+    a.coords = c.map(function(v){ return Math.round(v * s); }).join(","); // 换算为当前显示坐标
+  });
+}
+img.addEventListener("load", fitMap);
+window.addEventListener("resize", fitMap);
+if (img.naturalWidth) fitMap();                // 图片已缓存时直接算
+</script>
+</body>
+</html>
